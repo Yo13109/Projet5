@@ -1,0 +1,3 @@
+RewriteEngine On
+
+FallbackResource /projet5/index.php

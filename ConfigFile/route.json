@@ -1,0 +1,249 @@
+[
+	{
+		"path": "/",
+		"controller": "Home",
+		"action": "Home",
+		"method": "GET",
+		"param": [],
+		"manager": [
+			"User"
+		],
+		"auth": false
+	},
+	{
+		"path": "/Login",
+		"controller": "Admin",
+		"action": "Login",
+		"method": "GET",
+		"param": [],
+		"manager": [],
+		"auth": false
+	},
+	{
+		"path": "/Login",
+		"controller": "Admin",
+		"action": "Authenticate",
+		"method": "POST",
+		"param": [
+			"login",
+			"password"
+		],
+		"manager": [
+			"User"
+		],
+		"auth": false
+	},
+	{
+		"path": "/Error",
+		"controller": "Error",
+		"action": "Display",
+		"method": "GET",
+		"param": [],
+		"manager": [],
+		"auth": false
+	},
+	{
+		"path": "/MesPost",
+		"controller": "Post",
+		"action": "DisplayAll",
+		"method": "GET",
+		"param": [],
+		"manager": [
+			"Post"
+		],
+		"auth": false
+	},
+	{
+		"path": "/Post/([0-9]*)",
+		"controller": "Post",
+		"action": "DisplayOne",
+		"method": "GET",
+		"routeParam": [
+			"id"
+		],
+		"param": [],
+		"manager": [
+			"Comment",
+			"Post"
+		],
+		"auth": false
+	},
+	{
+		"path": "/Post/Commentaire",
+		"controller": "Post",
+		"action": "AddComment",
+		"method": "POST",
+		"routeParam": [],
+		"param": [
+			"pseudo",
+			"comment",
+			"id"
+		],
+		"manager": [
+			"Comment",
+			"Post"
+		],
+		"auth": false
+	},
+	{
+		"path": "/Admin",
+		"controller": "Admin",
+		"action": "Home",
+		"method": "GET",
+		"param": [],
+		"manager": [
+			"Post",
+			"Comment",
+			"User"
+		],
+		"auth": true
+	},
+	{
+		"path": "/Post/([0-9]*)/Signal/([0-9]*)",
+		"controller": "Post",
+		"action": "SignalComment",
+		"method": "GET",
+		"routeParam": [
+			"idpost",
+			"idcomment"
+		],
+		"param": [],
+		"manager": [
+			"Comment",
+			"Post"
+		],
+		"auth": false
+	},
+	{
+		"path": "/Admin/Post/Delete/([0-9]*)",
+		"controller": "Admin",
+		"action": "DeletePost",
+		"method": "GET",
+		"routeParam": [
+			"id"
+		],
+		"param": [],
+		"manager": [
+			"Post"
+		],
+		"auth": true
+	},
+	{
+		"path": "/Admin/Post/([0-9]*)",
+		"controller": "Admin",
+		"action": "ShowUpdatePost",
+		"method": "GET",
+		"routeParam": [],
+		"param": [],
+		"manager": [
+			"Post"
+		],
+		"auth": true
+	},
+	{
+		"path": "/Admin/Post/([0-9]*)",
+		"controller": "Admin",
+		"action": "UpdatePost",
+		"method": "POST",
+		"routeParam": [
+			"id"
+		],
+		"param": [
+			"title",
+			"content"
+		],
+		"manager": [
+			"Post"
+		],
+		"auth": true
+	},
+	{
+		"path": "/Admin/Add/",
+		"controller": "Admin",
+		"action": "ShowAddPost",
+		"method": "GET",
+		"routeParam": [],
+		"param": [],
+		"manager": [
+			"Post"
+		],
+		"auth": true
+	},
+	{
+		"path": "/Admin/Add/Post",
+		"controller": "Admin",
+		"action": "AddPost",
+		"method": "POST",
+		"routeParam": [],
+		"param": [
+			"title",
+			"content"
+		],
+		"manager": [
+			"Post",
+			"Comment"
+		],
+		"auth": true
+	},
+	{
+		"path": "/Admin/Comment/Delete/([0-9]*)",
+		"controller": "Admin",
+		"action": "DeleteComment",
+		"method": "GET",
+		"routeParam": [
+			"id"
+		],
+		"param": [],
+		"manager": [
+			"Comment"
+		],
+		"auth": true
+	},
+	{
+		"path": "/Admin/Comment/Signal/Delete/([0-9]*)",
+		"controller": "Admin",
+		"action": "DeleteComment",
+		"method": "GET",
+		"routeParam": [
+			"id"
+		],
+		"param": [],
+		"manager": [
+			"Comment"
+		],
+		"auth": true
+	},
+	{
+		"path": "/Admin/Comment/Add/([0-9]*)",
+		"controller": "Admin",
+		"action": "NoSignal",
+		"method": "GET",
+		"routeParam": [
+			"id"
+		],
+		"param": [],
+		"manager": [
+			"Comment",
+			"Post"
+		],
+		"auth": true
+	},
+	{
+		"path": "/Post/Contact",
+		"controller": "Post",
+		"action": "Mail",
+		"method": "POST",
+		"routeParam": [],
+		"param": [
+			"name",
+			"prenom",
+			"mail",
+			"comment"
+		],
+		"manager": [
+			"User",
+			"Post"
+		],
+		"auth": false
+	}
+]
