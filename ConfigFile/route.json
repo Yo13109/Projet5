@@ -96,7 +96,7 @@
 			"Comment",
 			"User"
 		],
-		"auth": false
+		"auth": true
 	},
 	{
 		"path": "/Post/([0-9]*)/Signal/([0-9]*)",
