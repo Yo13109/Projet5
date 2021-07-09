@@ -6,7 +6,7 @@ blog
 2.  Lancer la commande  `cd Yo13109/Projet5`
 3.  Lancer dans le terminal  `composer install`
 
-### [](git https://github.com/Yo13109/Projet5.git#remarques)Remarques
+### Remarques
 
 1.  Mettre à jour config/database.php
 
