@@ -52,7 +52,7 @@
   </div>
   <?= $content; ?>
 
-  <div class="pied">
+  <div class="pied mt-5">
     <div class="container">
 
       <div class="row">
