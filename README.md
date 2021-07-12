@@ -2,9 +2,10 @@
 blog
 ### Installation
 
-1.  Lancer la commande  `git https://github.com/Yo13109/Projet5.git`
-2.  Lancer la commande  `cd Yo13109/Projet5`
-3.  Lancer dans le terminal  `composer install`
+1. Se positionner à la racine du webserver (dossier www dans wamp)
+2.  Lancer la commande  `git clone  https://github.com/Yo13109/Projet5.git`
+3.  Ouvrez le dossier Projet 5 avec un éditeur de code.
+
 
 ### Remarques
 
@@ -13,11 +14,19 @@ blog
 Pour que vous puissiez vous connecter à votre base de données, veuillez modifier le fichier avec vos identifiants, hôte et nom de base de données Ces informations sont trouvables chez votre hébergeur.
 
 ```
-<?php
- define('DB_DSN', 'mysql:host=localhost;dbname=root;charset=UTF8');
- define('DB_USER', '');
- define('DB_PASS', '');
- define('DB_OPTIONS', array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+"database": {
+
+"name": "projet5",
+
+"dbname": "projet5",
+
+"host": "localhost",
+
+"user": "root",
+
+"password": ""
+
+}
 
 ```
 
@@ -35,6 +44,8 @@ Les identifiants par défaut sont :
 Administrateur
 
 > [yoann.corsi@gmail.com](mailto:yoann.corsi@gmail.com)  Yoann13109
+
+3.  Ouvrez votre navigateur à la page http://localhost/projet5/
 
 ### Contexte
 
